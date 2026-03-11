@@ -21,7 +21,13 @@ const nomesPraias = {
     rosa: "Praia do Rosa, SC",
     campeche: "Ilha do Campeche, SC",
     muroalto: "Muro Alto, PE",
-    pitinga: "Praia da Pitinga, BA"
+    pitinga: "Praia da Pitinga, BA",
+    // Novas praias adicionadas
+    praiadoforte: "Praia do Forte, Mata de São João - BA",
+    maragogi: "Maragogi - AL",
+    pipa: "Praia da Pipa, Tibau do Sul - RN",
+    arraialdocabo: "Arraial do Cabo - RJ",
+    caraiva: "Caraíva, Porto Seguro - BA"
 };
 
 // Ação: Gerar Roteiro via API do Vercel (Serverless Function)
