@@ -26,7 +26,7 @@ const nomesPraias = {
 
 // Ação: Gerar Roteiro via API do Vercel (Serverless Function)
 generateBtn.addEventListener('click', async () => {
-    const praiaId = beachSelect.value;
+    con praiaId = beachSelect.value;
     
     if (!praiaId) {
         alert("Por favor, selecione uma praia antes de gerar o roteiro.");
