@@ -136,7 +136,7 @@ openWindowBtn.addEventListener('click', () => {
 whatsappBtn.addEventListener('click', () => {
     // Pegamos a URL atual onde o app está rodando
     const linkDoApp = "https://roteiro-praias.vercel.app/";
-    const mensagem = `🏖️ Olha que sensacional o roteiro que eu gerei para a ${nomeDaPraiaGlobal}! Venha gerar o seu roteiro de viagem também: ${linkDoApp}`;
+    const mensagem = ` Olha que sensacional o roteiro que eu gerei para a ${nomeDaPraiaGlobal}! Venha gerar o seu roteiro de viagem também: ${linkDoApp}`;
     
     const urlWhatsApp = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
     window.open(urlWhatsApp, '_blank');
