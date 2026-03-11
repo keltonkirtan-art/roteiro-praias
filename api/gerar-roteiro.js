@@ -16,7 +16,8 @@ export default async function handler(req, res) {
     }
 
     const promptTexto = `Crie um roteiro turístico detalhado para a ${nomeDaPraia}. 
-    O roteiro DEVE abordar obrigatoriamente: segurança, beleza natural, qualidade da água do mar, avaliação/pontuação dos turistas, gastronomia local e opções de hospedagem.
+    O roteiro DEVE abordar obrigatoriamente: segurança, beleza natural, qualidade da água do mar, avaliação/pontuação dos turistas, opções de hospedagem e, ESPECIALMENTE, a gastronomia local.
+    Na seção de Gastronomia, você DEVE destacar 1 (um) prato típico regional obrigatório que o turista não pode deixar de provar nesta praia ou região.
     Retorne a resposta diretamente em formato HTML limpo, utilizando APENAS as tags <h3>, <p>, <ul> e <li>. Não utilize a tag <h1> nem blocos de código markdown (\`\`\`html).`;
 
     try {
