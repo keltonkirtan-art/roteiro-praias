@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiro Praias</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏖️ Roteiro Praias</h1>
+            <p>Selecione um destino e gere seu roteiro completo.</p>
+        </header>
+
+        <main>
+            <div class="selection-area">
+                <select id="beach-select">
+                    <option value="" disabled selected>Escolha uma praia paradisíaca...</option>
+                    <option value="sancho">Baía do Sancho, PE</option>
+                    <option value="carneiros">Praia dos Carneiros, PE</option>
+                    <option value="espelho">Praia do Espelho, BA</option>
+                    <option value="jeri">Jericoacoara, CE</option>
+                    <option value="patacho">Praia do Patacho, AL</option>
+                    <option value="taipu">Taipu de Fora, BA</option>
+                    <option value="rosa">Praia do Rosa, SC</option>
+                    <option value="campeche">Ilha do Campeche, SC</option>
+                    <option value="muroalto">Muro Alto, PE</option>
+                    <option value="pitinga">Praia da Pitinga, BA</option>
+                </select>
+                <button id="generate-btn" class="primary-btn">Gerar Roteiro</button>
+            </div>
+
+            <div id="output-area" class="hidden">
+                <h2>✅ Roteiro gerado com sucesso!</h2>
+                <div class="action-buttons">
+                    <button id="download-btn" class="action-btn">Baixar em PDF</button>
+                    <button id="open-window-btn" class="action-btn">Abrir Janela</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="pdf-content" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

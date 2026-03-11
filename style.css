@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #0077b6; /* Azul profundo marinho */
+    --secondary-color: #00b4d8; /* Azul claro água */
+    --accent-color: #ffb703; /* Amarelo areia/sol */
+    --bg-color: #e0fbfc; /* Fundo bem claro */
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.selection-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+select, button {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Regra estrita: Botões com texto em branco */
+button {
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s, background-color 0.3s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#output-area {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+#output-area h2 {
+    color: #2a9d8f;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-btn {
+    background-color: var(--accent-color);
+    flex: 1;
+}
+
+.action-btn:hover {
+    background-color: #fb8500;
+}
+
+/* Estilos internos para o Roteiro Gerado (Nova janela / PDF) */
+#pdf-content {
+    background: white;
+    padding: 2rem;
+    color: #333;
+}
+.roteiro-title { color: var(--primary-color); text-align: center; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem;}
+.roteiro-section { margin-bottom: 1.5rem; }
+.roteiro-section h3 { color: var(--secondary-color); margin-bottom: 0.5rem; }
+.roteiro-list { margin-left: 1.5rem; list-style-type: none; margin-left: 0; padding-left: 0; }
+.roteiro-list li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+.roteiro-list li::before { content: '🏖️'; position: absolute; left: 0; }
