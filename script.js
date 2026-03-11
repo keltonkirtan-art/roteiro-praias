@@ -5,6 +5,7 @@ const outputArea = document.getElementById('output-area');
 const pdfContent = document.getElementById('pdf-content');
 const downloadBtn = document.getElementById('download-btn');
 const openWindowBtn = document.getElementById('open-window-btn');
+const whatsappBtn = document.getElementById('whatsapp-btn');
 
 // Variável global para armazenar o HTML do roteiro gerado
 let roteiroHtmlAtual = "";
@@ -33,6 +34,7 @@ generateBtn.addEventListener('click', async () => {
     }
 
     const nomeDaPraia = nomesPraias[praiaId];
+    nomeDaPraiaGlobal = nomeDaPraia;
     
     // Feedback visual de carregamento
     generateBtn.innerText = "Gerando Roteiro (Aguarde)...";
@@ -128,4 +130,14 @@ openWindowBtn.addEventListener('click', () => {
 
     // Injeta o HTML na nova aba
     novaJanela.document.documentElement.innerHTML = conteudoHTML;
+});
+
+// Ação: Compartilhar no WhatsApp
+whatsappBtn.addEventListener('click', () => {
+    // Pegamos a URL atual onde o app está rodando
+    const linkDoApp = "https://roteiro-praias.vercel.app/";
+    const mensagem = `🏖️ Olha que sensacional o roteiro que eu gerei para a ${nomeDaPraiaGlobal}! Venha gerar o seu roteiro de viagem também: ${linkDoApp}`;
+    
+    const urlWhatsApp = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
+    window.open(urlWhatsApp, '_blank');
 });
