@@ -7,13 +7,13 @@ const downloadBtn = document.getElementById('download-btn');
 const openWindowBtn = document.getElementById('open-window-btn');
 const whatsappBtn = document.getElementById('whatsapp-btn');
 
-// Vari√°vel global para armazenar o HTML do roteiro gerado
+// Vari·vel global para armazenar o HTML do roteiro gerado
 let roteiroHtmlAtual = "";
 
 // Mapeamento dos nomes reais das praias para o prompt da IA
 const nomesPraias = {
-    sancho: "Ba√≠a do Sancho, Fernando de Noronha - PE",
-    carneiros: "Praia dos Carneiros, Tamandar√© - PE",
+    sancho: "BaÌa do Sancho, Fernando de Noronha - PE",
+    carneiros: "Praia dos Carneiros, TamandarÈ - PE",
     espelho: "Praia do Espelho, Trancoso - BA",
     jeri: "Jericoacoara, CE",
     patacho: "Praia do Patacho, AL",
@@ -24,7 +24,7 @@ const nomesPraias = {
     pitinga: "Praia da Pitinga, BA"
 };
 
-// A√ß√£o: Gerar Roteiro via API do Vercel (Serverless Function)
+// AÁ„o: Gerar Roteiro via API do Vercel (Serverless Function)
 generateBtn.addEventListener('click', async () => {
     const praiaId = beachSelect.value;
     
@@ -66,14 +66,14 @@ generateBtn.addEventListener('click', async () => {
                 ${data.roteiro}
             </div>
             <div style="text-align: center; margin-top: 30px; font-size: 0.8rem; color: #666;">
-                <p>Gerado por Roteiro Praias App via Intelig√™ncia Artificial</p>
+                <p>Gerado por Roteiro Praias App via InteligÍncia Artificial</p>
             </div>
         `;
 
-        // Salva o HTML no container invis√≠vel para o PDF
+        // Salva o HTML no container invisÌvel para o PDF
         pdfContent.innerHTML = roteiroHtmlAtual;
 
-        // Restaura o bot√£o e exibe a √°rea de sucesso com os bot√µes
+        // Restaura o bot„o e exibe a ·rea de sucesso com os botıes
         generateBtn.innerText = "Gerar Roteiro";
         generateBtn.disabled = false;
         outputArea.classList.remove('hidden');
@@ -86,7 +86,7 @@ generateBtn.addEventListener('click', async () => {
     }
 });
 
-// A√ß√£o: Baixar em PDF
+// AÁ„o: Baixar em PDF
 downloadBtn.addEventListener('click', () => {
     pdfContent.classList.remove('hidden');
 
@@ -103,7 +103,7 @@ downloadBtn.addEventListener('click', () => {
     });
 });
 
-// A√ß√£o: Abrir Janela (Sem document.write!)
+// AÁ„o: Abrir Janela (Sem document.write!)
 openWindowBtn.addEventListener('click', () => {
     const novaJanela = window.open('', '_blank');
     
@@ -132,11 +132,11 @@ openWindowBtn.addEventListener('click', () => {
     novaJanela.document.documentElement.innerHTML = conteudoHTML;
 });
 
-// A√ß√£o: Compartilhar no WhatsApp
+// AÁ„o: Compartilhar no WhatsApp
 whatsappBtn.addEventListener('click', () => {
-    // Pegamos a URL atual onde o app est√° rodando
+    // Pegamos a URL atual onde o app est· rodando
     const linkDoApp = "https://roteiro-praias.vercel.app/";
-    const mensagem = `üèñÔ∏è Olha que sensacional o roteiro que eu gerei para a ${nomeDaPraiaGlobal}! Venha gerar o seu roteiro de viagem tamb√©m: ${linkDoApp}`;
+    const mensagem = `??? Olha que sensacional o roteiro que eu gerei para a ${nomeDaPraiaGlobal}! Venha gerar o seu roteiro de viagem tambÈm: ${linkDoApp}`;
     
     const urlWhatsApp = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
     window.open(urlWhatsApp, '_blank');
